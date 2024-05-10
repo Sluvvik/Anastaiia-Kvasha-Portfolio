@@ -1,0 +1,92 @@
+*
+  margin: 0px
+  padding: 0px
+  box-sizing: border-box
+
+$index: calc(1vw + 1vh)
+$color-text: #DFD9D6
+$color-border: #000100
+$back-color: #647B52
+$gallery-gap: calc( $index * 4)
+$small-sizer: / 2
+
+@font-face
+  font-family: raleway-c
+  src: url(../../fonts/raleway-regular.woff2) // later add other specific of font
+
+@font-face 
+  font-family: outfit-c
+  src: url(../../fonts/outfit-regular.woff2) // later add other specific of font
+
+h1, h2, h3, h4, h5, h6
+  font-family: outfit-c
+
+// will-change properties
+.content, .hero, .main-header, .gallery > * 
+  will-change: transform
+
+
+
+body
+  background-color: $back-color
+  color: $color-text
+  font-family: raleway-c
+  overflow-x: hidden
+
+.hero-img
+  position: absolute
+  width: calc( $index * 22)
+  left: 44vw
+  top: 10vh
+  z-index: 0
+
+.container
+  padding: 0 5vw
+  
+.name-header
+  height: 100dvh
+
+.name-hero
+  position: absolute
+  font-size: calc( $index * 5)
+  z-index: 1
+  width: min-content
+  bottom: 15vh
+  line-height: .9
+
+
+.gallery
+  display: flex
+  padding: calc( $index * 5) 0
+
+.gallery > *
+  flex: 1
+  display: flex
+  align-items: center
+  flex-direction: column
+
+.gallery__item
+  border:6px $color-border solid 
+  border-radius: 8px
+  margin-bottom: $gallery-gap
+  max-width: calc( $index * 22 )
+  max-height: 180vh
+
+.gallery__left
+  margin-top: calc( $index * 6 ) 
+
+.gallery__right .gallery__item
+  margin: 0
+  margin-top: $gallery-gap 
+  
+.text-block 
+  color: $color-text
+  position: relation
+
+.text-block__h
+  font-size: 2rem
+  line-height: 2.2rem
+  color: #F0F0F0
+  margin-bottom: 1.2rem
+
+@media only screen and (max-width: 600px)
