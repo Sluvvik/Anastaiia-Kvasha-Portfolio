@@ -29,7 +29,7 @@ body {
 
 .hero-img {
   position: absolute;
-  width: calc((1vw + 1vh) * 22);
+  width: calc((1dvw + 1dvh) * 22);
   left: 44vw;
   top: 10vh;
   z-index: 0;
@@ -45,7 +45,7 @@ body {
 
 .name-hero {
   position: absolute;
-  font-size: calc((1vw + 1vh) * 5);
+  font-size: calc((1dvw + 1dvh) * 5);
   z-index: 1;
   width: min-content;
   bottom: 15vh;
@@ -54,7 +54,7 @@ body {
 
 .gallery {
   display: flex;
-  padding: calc((1vw + 1vh) * 5) 0;
+  padding: calc((1dvw + 1dvh) * 5) 0;
 }
 
 .gallery > * {
@@ -67,18 +67,18 @@ body {
 .gallery__item {
   border: 6px #000100 solid;
   border-radius: 8px;
-  margin-bottom: calc((1vw + 1vh) * 4);
-  max-width: calc((1vw + 1vh) * 22);
+  margin-bottom: calc((1dvw + 1dvh) * 4);
+  max-width: calc((1dvw + 1dvh) * 22);
   max-height: 180vh;
 }
 
 .gallery__left {
-  margin-top: calc((1vw + 1vh) * 6);
+  margin-top: calc((1dvw + 1dvh) * 6);
 }
 
 .gallery__right .gallery__item {
   margin: 0;
-  margin-top: calc((1vw + 1vh) * 4);
+  margin-top: calc((1dvw + 1dvh) * 4);
 }
 
 .text-block {
