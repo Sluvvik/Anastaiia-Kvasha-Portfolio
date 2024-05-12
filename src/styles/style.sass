@@ -8,15 +8,15 @@ $color-text: #DFD9D6
 $color-border: #000100
 $back-color: #647B52
 $gallery-gap: calc( $index * 4)
-$small-sizer: / 2
+
 
 @font-face
   font-family: raleway-c
-  src: url(../../fonts/raleway-regular.woff2) // later add other specific of font
+  src: url(../../fonts/raleway-regular.woff2)
 
 @font-face 
   font-family: outfit-c
-  src: url(../../fonts/outfit-regular.woff2) // later add other specific of font
+  src: url(../../fonts/outfit-regular.woff2)
 
 h1, h2, h3, h4, h5, h6
   font-family: outfit-c
@@ -36,9 +36,10 @@ body
 .hero-img
   position: absolute
   width: calc( $index * 22)
-  left: 44vw
-  top: 10vh
+  left: 47dvw
+  top: calc( $index * 5)
   z-index: 0
+  border-radius: 8px
 
 .container
   padding: 0 5vw
@@ -54,7 +55,6 @@ body
   bottom: 15vh
   line-height: .9
 
-
 .gallery
   display: flex
   padding: calc( $index * 5) 0
@@ -66,11 +66,10 @@ body
   flex-direction: column
 
 .gallery__item
-  border:6px $color-border solid 
   border-radius: 8px
   margin-bottom: $gallery-gap
-  max-width: calc( $index * 22 )
-  max-height: 180vh
+  max-width: calc( $index * 21 )
+  max-height: 95vh
 
 .gallery__left
   margin-top: calc( $index * 6 ) 
@@ -89,4 +88,90 @@ body
   color: #F0F0F0
   margin-bottom: 1.2rem
 
+
+
+
+
+
+
+@media only screen and (max-width: 800px)
+  .gallery__item
+    max-width: calc($index * 17 )
+
+@media only screen and (max-width: 768px)
+  .text-block__h
+    font-size: 1.9rem
+    line-height: 1.8rem
+
+  .text-block__p
+    font-size: 0.8rem
+    line-height: 1rem
+
 @media only screen and (max-width: 600px)
+  .hero-img
+      left: 40dvw
+
+  .name-hero
+    top: calc($index *38)
+
+  .gallery__item
+    max-width: calc($index * 16 )
+
+  .text-block__h
+    font-size: 1.8rem
+    line-height: 1.7rem
+
+  .text-block__p
+    font-size: 0.7rem
+    line-height: 0.9rem
+
+@media only screen and (max-width: 500px)
+  .hero-img
+    left: 35dvw
+
+  .name-hero
+    top: calc($index *39)
+
+  .gallery__item
+    max-width: calc($index * 15 )
+
+  .text-block__h
+    font-size: 1.7rem
+    line-height: 1.6rem
+
+  .text-block__p
+    font-size: 0.6rem
+    line-height: 0.9rem
+
+@media only screen and (max-width: 450px)
+  .hero-img
+    left: 30dvw
+
+  .name-hero
+    top: calc($index *41)
+
+  .gallery__item
+    max-width: calc($index * 14 )
+
+  .text-block__h
+    font-size: 1.6rem
+    line-height: 1.5rem
+
+  .text-block__p
+    font-size: 0.8rem
+    line-height: 1rem
+
+@media only screen and (max-width: 380px)
+  .hero-img
+    left: 27dvw
+
+  .gallery__item
+    max-width: calc($index * 12 )
+
+  .text-block__h
+    font-size: 1.2rem
+    line-height: 1.3rem
+
+  .text-block__p
+    font-size: 0.8rem
+    line-height: 1rem

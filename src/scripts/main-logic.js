@@ -1,7 +1,7 @@
 // reg libs
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-//ScrollTrigger.isTouch !== 1
-if (true) {
+
+if (ScrollTrigger.isTouch !== 1) {
   ScrollSmoother.create({
     wrapper: '.wrapper',
     content: '.content',
@@ -49,3 +49,13 @@ if (true) {
 
 
 };
+
+//Check it later then you will pushing this code
+function optimizeTouch (){
+  if(ScrollTrigger.isTouch !== 1){
+    const gallerySides = document.querySelector('.gallery__left, .gallery__right');
+    return gallerySides.removeAttribute('data-speed')
+  };
+};
+
+optimizeTouch();
